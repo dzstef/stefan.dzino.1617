@@ -1,0 +1,57 @@
+<html t:type="layout" title="MetHotels Index"
+      t:sidebarTitle="Framework Version"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit">
+        <p>
+            <img src="${asset:context:images/tapestry.png}"
+                 alt="${message:greeting}" title="${message:greeting}" />
+        </p>
+        <h3>${message:greeting}</h3>
+        <p> Trenutno vreme: <strong>${currentTime}</strong></p>
+        <p>
+Hotel nudi:            
+<li> Kapacitet smještaja u Bosni i Hercegovini s 418 jedinica smještaja najvišeg standarda </li>
+<li> Kongresni centar sa 18 sala, 3000 mjesta i tehnièki najsavršenijom opremom </li>
+<li> Restoran u kojem se u 4 ili 8 prostora može istovremeno uslužiti 1500 gostiju </li>
+<li> Sportsko-rekreativni centar sa sportskom dvoranom (po FIBA standardima), poluolimpijskim bazenom, (dimenzija 25 x 12 m), bowling (4 staze)  bilijar (5 stolova) </li>
+<li> Fitness centar opremljen savremenom tehno gym opremom </li>
+<li> Wellness-spa centar, gdje užitak stanuje, a vrijeme nestaje. Saune: finska, infracrvena, infrazelena i parna, turski hamam,slana soba, stojeæi solarij Luxura V5, relax soba, frizerski salon, masaže, depilacija, manikir, pedikir </li>
+<li> Polivalentni, specijalistièki zdravstveni centar </li>
+<li> Kulturno-zabavni centar s bibliotekom, koncertnom dvoranom i teatar salom </li>
+<li> Turistièka agencija, siguran i pouzdan partner u turistièkom usluživanju i posredovanju </li>
+<li> Podzemna garaža na dva nivoa i u prizemlju hotela sa 200 parking mjesta, sa fizièkim obezbjeðenjem i kontinuiranim nadzorom </li>
+<li> Parking ispred Hotela sa 200 parking mjesta sa fizièkim obezbjeðenjem i kontinuiranim nadzorom  </li>
+        </p>
+        <p><t:actionlink t:id="learnmore" class="btn btn-primary btn-large">Learn more &raquo;</t:actionlink></p>
+    </div>
+
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="span4">
+            <h2></h2>
+            <p></p>
+            <p><t:eventlink event="complete" class="btn" >Complete&raquo;</t:eventlink></p>
+        </div>
+        <t:zone t:id="middlezone" class="span4">
+
+        </t:zone>
+        <div class="span4">
+            <h2></h2>
+            <p></p>
+            <p><t:eventlink event="ajax" zone="middlezone" class="btn" >Ajax&raquo;</t:eventlink></p>
+        </div>
+    </div>
+
+    <t:block t:id="block">
+        <h2>Ajax updated</h2>
+        <p>I'v been updated through AJAX call</p>
+        <p>The current time is: <strong>${currentTime}</strong></p>
+        <t:alerts />
+    </t:block>
+
+</html>
